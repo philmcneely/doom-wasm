@@ -78,7 +78,7 @@
                 },
                 printErr: function (text) {
                     if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(" ");
-                    console.error(text);
+                    console.warn(text); // arcade: engine stderr (e.g. DEHACKED notes) is not a page error; real exceptions still reach window.onerror
                 },
                 canvas: (function () {
                     var canvas = document.getElementById("canvas");
